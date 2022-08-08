@@ -10,6 +10,7 @@ let clickButton = document.getElementById("searchButton")
 // clickButton.addEventListener("click", () => {
 //   masterFilter()
 // })
+//
 enterInput.addEventListener("change", () => {
   masterFilter()
 })

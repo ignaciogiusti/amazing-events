@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #d90368;
+}
+.logo{
+    max-height: 4vh;
+    padding-left: 10px;
+}
+header{
+    background-color: grey;
+    min-height: 150px;
+    margin-top: 6vh;
+}
+h1{display: none;}
+main{
+    min-height: 85vh;
+    background-color: whitesmoke;
+}
+footer{
+    background-color: grey;
+    min-height: 15vh;
+}
+.search{
+    width: 15px;
+}
+.headersidebutton{
+    color: black;
+    font-weight: bold;
+    font-size: xx-large;
+    text-decoration: none;
+    transition: ease-out 0.3s;
+}
+.headersidebutton>a{
+    color: black;
+    text-decoration: none;
+    padding: 54px 3vh;
+}
+.headersidebutton:hover>a{
+    color: lightgrey;
+    background-color: rgb(70, 70, 70);
+    transition: ease-in 0.3s;
+}
+.socialmedia{
+    height: 45px;
+}
+.sheader{
+    display: none !important;
+}
+.details{
+    margin-top: 5vh;
+}
+.arealock{
+    resize: none;
+    height: 30vh;
+}
+table{
+    border: 1px black solid;
+}
+tr{
+    border: 1px rgba(0, 0, 0, 0.25) solid;
+}
+td{
+    height: 4vh;
+    border: 1px rgba(0, 0, 0, 0.25) solid;
+}
+
+dt{
+    padding: 0;
+    margin: 0
+}
+dd{
+    padding: 0;
+    margin: 0
+}
+.btn{
+    background-color: lightgrey;
+    color: black;
+}
+.btn:hover{
+    color: black;
+}
+.card{
+    width: 18rem;
+    padding: 0;
+}
+.card-img-top{
+    height: 45%;
+    object-fit: cover;
+}
+.bigcard{
+    border-radius: 7px;
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+    #categoryContainer{
+        display: flex;
+        flex-flow: column wrap;
+        gap: 2px;
+    }
+    .input-group{
+        margin-top: 5px;
+    }
+
+}

@@ -1,5 +1,6 @@
 const arrayEvents = data.events
 
+// API: https://amazing-events.herokuapp.com/api/events
 /*--------------------------------Search------------------------------*/
 let enterInput = document.getElementById("searchInput")
 let clickButton = document.getElementById("searchButton")
@@ -46,9 +47,13 @@ function filteredCategory(eventCheck) {
 }
 
 function masterFilter() {
-  let filteredEvents = filteredCategory(arrayEvents);
-  filteredEvents = filterText(enterInput.value, filteredEvents);
-  cardPrint(filteredEvents)
+  let filteredEvents = filterText(enterInput.value, arrayEvents)
+  filteredEvents = filteredCategory(filteredEvents)
+  if(filteredEvents.length === 0){
+    wrongSearch()
+  } else {
+    cardPrint(filteredEvents)
+  }
 }
 
 /*--------------------------------Cards------------------------------*/

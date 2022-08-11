@@ -1,5 +1,6 @@
 const arrayEvents = data.events
 
+// API: https://amazing-events.herokuapp.com/api/events
 /*--------------------------------Search------------------------------*/
 let enterInput = document.getElementById("searchInput")
 let clickButton = document.getElementById("searchButton")

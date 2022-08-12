@@ -1,6 +1,10 @@
-const arrayEvents = data.events
+const eventsAPI= fetch("https://amazing-events.herokuapp.com/api/events")
+  .then(response => response.json())
+  .then(data => array(data))
+  const array = (data) => {
+    
+let arrayEvents = data.events
 
-// API: https://amazing-events.herokuapp.com/api/events
 /*--------------------------------Search------------------------------*/
 let enterInput = document.getElementById("searchInput")
 let clickButton = document.getElementById("searchButton")
@@ -74,3 +78,4 @@ function cardPrint(eventCard){
   })
 }
 cardPrint(arrayEvents)
+}

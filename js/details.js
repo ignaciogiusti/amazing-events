@@ -1,6 +1,12 @@
+const eventsAPI= fetch("https://amazing-events.herokuapp.com/api/events")
+  .then(response => response.json())
+  .then(data => array(data))
+  const array = (data) => {
+    let arrayEvents = data.events
+    
 const queryString = location.search
 const params = new URLSearchParams(queryString)
-const id = parseInt(params.get("id"))
+const id = params.get("id")
 
 const events = arrayEvents.find(eventId => eventId._id == id)
 const detailsCard = document.getElementById("bigCardContainer")
@@ -34,3 +40,4 @@ const detailsCard = document.getElementById("bigCardContainer")
       </div>
     </div>
     </div>`
+  }

@@ -1,10 +1,15 @@
-const arrayEvents = data.events
-
-// API: https://amazing-events.herokuapp.com/api/events
-/*--------------------------------Search------------------------------*/
+const eventsAPI= fetch("https://amazing-events.herokuapp.com/api/events")
+  .then(response => response.json())
+  .then(data => array(data))
+  const array = (data) => {
+    
+let arrayEvents = data.events
+/* const arrayEvents = data.events */
 let enterInput = document.getElementById("searchInput")
 let clickButton = document.getElementById("searchButton")
-
+let getCategories = document.getElementById("categoryContainer")
+let getCards = document.getElementById("cardContainer")
+/*--------------------------------Search------------------------------*/
 enterInput.addEventListener("change", () => {
   masterFilter()
 })
@@ -15,7 +20,6 @@ function filterText(enterInput, arrayEvents) {
 }
 
 /*--------------------------------Checkboxes------------------------------*/
-let getCategories = document.getElementById("categoryContainer")
 let arrayCategories = arrayEvents.map(eventsCat => eventsCat.category) // String[]
 
 const noRepeatCheckbox = new Set(arrayCategories)
@@ -57,8 +61,6 @@ function masterFilter() {
 }
 
 /*--------------------------------Cards------------------------------*/
-let getCards = document.getElementById("cardContainer")
-
 function cardPrint(eventCard){
   let cardContainer = document.getElementById("cardContainer")
   cardContainer.innerHTML = ``
@@ -80,4 +82,5 @@ cardPrint(arrayEvents)
 
 function wrongSearch(){
   cardContainer.innerHTML = `<h3 class="text-center">No event found</h3>`
+}
 }
